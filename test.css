@@ -1,14 +1,48 @@
 *{
- /* margin: 0; */
- /* padding: 0; */
+ margin: 0;
+ padding: 0;
 }
+
+:root {
+    --background: rgb(13, 35, 46);
+    --med_dark_blue: rgb(1, 67, 93);
+    --med_light_blue: rgb(33, 111, 141);
+    --light_blue: rgb(168, 187, 194);
+    --font_color: rgb(218, 220, 215);
+    --weird_green: rgb(150, 183, 174);
+}
+
 body *{
 }
-h1{
-    padding : 100px;
-    background: rgb(21, 12, 35);
-    color: white;
+.project_content{
+    margin-top: 2.5rem;
 }
-.image{
-    width: 150px;
+.image_container{
+    width: 50vw;
+    height: 50vh;
+    margin-left: 5vw;
+    border-radius: 7px;
+    box-shadow: 0 0 12px #000;
+    overflow: hidden;
+    position: relative;
+    float: left;
+    margin-right: 2rem;
+    
+}
+
+.info_image{
+    position: absolute;
+    width: 100%;
+}
+
+.info_text{
+    padding: 0 5%;
+}
+.info_text h2{
+    font-size: 2.5rem;
+}
+.info_text p{
+    font-size: 1.4rem;
+    line-height: 2rem;
+    text-align: justify;
 }
