@@ -17,7 +17,7 @@ body *{
 .project_content{
     margin-top: 2.5rem;
 }
-.image_container{
+.images_container{
     width: 50vw;
     height: 50vh;
     margin-left: 5vw;
@@ -45,4 +45,8 @@ body *{
     font-size: 1.4rem;
     line-height: 2rem;
     text-align: justify;
+}
+.info_image_description{
+    font-style: italic;
+    position: absolute;
 }
