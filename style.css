@@ -162,6 +162,11 @@ body * {
     animation-duration: 12s;
 }
 
+.diashow:hover{
+    animation-play-state: paused;
+}
+
+
 .diashow::-webkit-scrollbar {
     display: none;
 }
@@ -173,8 +178,14 @@ body * {
 
 .diashow_image{
     height: 100%;
+    transition: transform .3s, border-radius .3s;
 }
 
+.diashow_image:hover{
+    border-radius: 10px;
+    transform: scale(1.05);
+    z-index: 1000;
+}
 @keyframes diashow_animation{
     0%{
         transform: translateX(0%);
