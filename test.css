@@ -1,0 +1,14 @@
+*{
+ /* margin: 0; */
+ /* padding: 0; */
+}
+body *{
+}
+h1{
+    padding : 100px;
+    background: rgb(21, 12, 35);
+    color: white;
+}
+.image{
+    width: 150px;
+}

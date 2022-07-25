@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --dark_blue: rgb(13, 35, 46);
+    --med_dark_blue: rgb(1, 67, 93);
+    --med_light_blue: rgb(33, 111, 141);
+    --light_blue: rgb(168, 187, 194);
+    --sand_gray: rgb(218, 220, 215);
+    --weird_green: rgb(150, 183, 174);
+}
+
+@font-face {
+    font-family: Comic;
+    src: url("Ldfcomicsans-jj7l.ttf");
+}
+
+body{
+    width: 100vw;
+    height: 1100vh;
+    background-color: rgb(24, 27, 35);
+    color: white;
+    font-family: Calibri;
+}
+#main_headline{
+    width: 90%;
+    margin-inline: auto;
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 3rem;
+}
+.nav{
+    margin: 1rem 0 0 0 ;
+    width: 90%;
+    margin-inline: auto;
+    border-top: 2px solid white;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-around;
+    padding-top: 1rem;
+    font-size: 1.3rem;
+}
+.nav *{
+    color: white;
+    text-decoration: none;
+}
+
+
+.dropdown{
+    padding-left: 1rem;
+    position: relative;
+}
+.dropdown::before{
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: 0;
+    top: calc(50% - .5rem);
+    border-top: .5rem solid transparent;
+    border-bottom: .5rem solid transparent;
+    border-right: 0rem solid transparent;
+    border-left: .7rem solid white; 
+}

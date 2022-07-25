@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Unwichtige Nebeninformationen die automatisch generiert werden -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projekttage 2022</title>
+
+    <!-- 
+        Der Link zur CSS Datei 
+        -> In dieser Datei wird nur das Design gemanaged
+        -> Sie muss hier importiert werden, um auf das HTML in dieser Datei einen Effekt zu haben
+    -->
+    <link rel="stylesheet" href="learning.css" />
+  </head>
+  <body>
+    <!-- Die Überschrift -->
+    <h1>Projekttage am KANT</h1>
+
+    <!-- Der erste Container (div) mit der Klasse "section" (Kann dann im CSS darüber angesprochen und designed werden) -->
+    <div class="section" id="intro">
+      <p>
+        Dieses Jahr fällt zwar das Kant-Fest aus, doch wir wollen mit dieser
+        Seite einen kleinen Einblick in all die Projekte bieten, die dieses Jahr
+        umgesetzt wurden.
+      </p>
+    </div>
+
+    <!-- 
+        Der zweite Container mit zwei anderen Klassen
+        - "section" wie oben, damit behält es alle Eigenschaften aus dem CSS für die Klasse "section"
+        - die Klasse "image" dient dazu, weitere Design-Attribute hinzuzufügen, die nur auf Container mit Bildern darin zutreffen sollen
+        - "left" spezifiziert dass das Bild links vom Text lokalisiert sein soll, hierfür muss das Bild im HTML vor dem Text eingefügt werden
+    -->
+    <div class="section image left">
+      <img src="webdev_image.png" alt="KantHead" />
+      <p class="content">
+        Hier ist ein Image container, und hier könnte der beschreibende Text
+        stehen
+      </p>
+    </div>
+
+    <!-- 
+        Hier die Klasse "right" anstatt wie oben "left", um den für ein rechts lokalisiertes Bild Style zu verwenden
+     -->
+    <div class="section image right">
+      <p class="content">
+        Hier ist ein zweiter Container und sowohl Text als Bild können anders
+        orientiert sein
+      </p>
+      <img src="webdev_image2.png" alt="KantHead" />
+    </div>
+  </body>
+</html>
