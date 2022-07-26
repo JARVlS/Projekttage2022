@@ -91,8 +91,25 @@ body * {
     list-style-type: none;
 }
 
+#content_list>li{
+    width: 100%;
+}
+#content_list a{
+    width: 100%;
+}
+
 #content_list>li+li {
     margin-top: 1rem;
+}
+
+#content_list *{
+    transition: transform .2s, color .2s;
+}
+#content_list>li>a:hover{
+    color: var(--weird_green);
+}
+#content_list>li:hover{
+    transform: scale(1.05);
 }
 
 .dropdown>.content::before {
