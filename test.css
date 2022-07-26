@@ -30,6 +30,11 @@ body *{
     
 }
 
+.image_container{
+    opacity: 0;
+    transition: opacity .75s;
+}
+
 .info_image{
     position: absolute;
     width: 100%;
@@ -47,6 +52,15 @@ body *{
     text-align: justify;
 }
 .info_image_description{
+    opacity: 0;
     font-style: italic;
     position: absolute;
+    transition: opacity .5s;
+}
+
+.image_container:hover>.info_image_description{
+    opacity: 1;
+}
+.image_container:hover>.info_image{
+    filter: blur(3px);
 }

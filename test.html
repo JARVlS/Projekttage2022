@@ -38,59 +38,47 @@
 
         <div class="image_container">
           <img class="info_image" src="webdev_image2.png" alt="" />
-          <p class="info_image_description">Hier ist unser erstes Bild</p>
+          <p class="info_image_description">Hier ist unser zweites Bild</p>
         </div>
         <div class="image_container">
           <img class="info_image" src="webdev_image.png" alt="" />
-          <p class="info_image_description">Hier ist unser erstes Bild</p>
+          <p class="info_image_description">Hier ist unser drittes Bild</p>
         </div>
         <div class="image_container">
           <img class="info_image" src="webdev_image2.png" alt="" />
-          <p class="info_image_description">Hier ist unser erstes Bild</p>
+          <p class="info_image_description">Hier ist unser viertes Bild</p>
         </div>
       </div>
       <div class="info_text">
-        <h2 class="project_name_headline">Projektname</h2>
+        <h2 class="project_name_headline">LEBENMITTELTECHNOLOGIE</h2>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-          itaque impedit tempore? Libero, ab aspernatur. Quod illum amet
-          officia, nisi totam, hic debitis doloribus, ipsam similique veritatis
-          ipsa atque quam magni suscipit voluptas ea excepturi quia. Molestiae
-          nostrum ratione blanditiis voluptatum dicta. Minus distinctio nostrum
-          fugit dolore? Ad temporibus doloribus itaque eos tempore tempora atque
-          unde veritatis velit! Quidem asperiores voluptatem saepe quibusdam
-          incidunt exercitationem nemo, sunt error ipsam aspernatur aperiam
-          nostrum sequi consequatur est molestiae officiis quos ducimus, in
-          delectus. Nam optio, maiores quae labore reiciendis consequuntur natus
-          deserunt numquam enim aliquam. Exercitationem officia inventore
-          asperiores, dolorum quasi esse modi ex eum voluptas, distinctio, iure
-          nulla cum doloremque nemo repellendus consequuntur natus dicta. Atque
-          enim qui ad, ea odio labore possimus odit veritatis porro doloremque,
-          nesciunt dicta minus vitae. Explicabo iusto facere est illo
-          voluptatibus perspiciatis quidem obcaecati dolorum aut distinctio,
-          deserunt qui ipsa assumenda exercitationem quod asperiores rem amet
-          inventore alias vitae suscipit quis cum vel quia? Impedit reiciendis
-          ullam harum. Unde ullam rem repudiandae odio vel quasi nostrum fugiat,
-          molestias deserunt harum maiores neque sapiente provident ipsum
-          aliquam, a voluptas recusandae iusto, impedit natus expedita tempora
-          nam? Maiores quod accusamus iusto quo eligendi dolore non dolores
-          voluptate dolorem ducimus! Eaque laborum consequatur, magni velit
-          saepe voluptas atque itaque illum vero? Voluptate sint facilis minus
-          exercitationem autem quisquam quod, iste dolores eaque sequi quaerat
-          accusantium ipsum illum itaque, blanditiis a dicta ratione neque unde
-          doloribus iure mollitia. Accusantium nostrum illum facilis laboriosam
-          voluptatem dolor ut sapiente culpa cumque! Alias harum similique
-          consequatur at nemo, aliquam vel perspiciatis autem, enim in veritatis
-          suscipit, fuga beatae. Adipisci eaque eius totam saepe optio aperiam.
-          Quis quasi nisi in dolorum corrupti tempora nihil neque aut provident
-          quidem officiis accusamus dolorem cupiditate, excepturi consectetur
-          similique reprehenderit voluptatibus voluptatum molestiae voluptatem
-          enim delectus dolor ipsa esse? Cum placeat adipisci accusamus
-          praesentium, expedita quidem hic eius voluptas. Voluptatem dolorem
-          perferendis fugit iusto saepe sit excepturi officia neque nulla enim
-          Commodi repellat vitae at culpa doloribus eum facilis.
+          Mikroorganismen sind ein wichtiger Bestandteil für unsere
+          Lebensmittel. Brot, Käse, Salami oder Kaffee würde es ohne Bakterien
+          und Hefe nicht geben. Die SchülerInnen stellen einen Sauerteig her,
+          mithilfe dessen Brot hergestellt werden kann. Joghurt entsteht durch
+          Fermentation von Milch durch Milchsäurebakterien und die SchülerInnen
+          experimentieren hier mit verschiedenen Milcharten (Soja, Mandel,
+          Kuh...). Am letzten Tag wurde Eiscreme hergestellt und nach der
+          geschmeidigsten Eiscreme geforscht.
         </p>
       </div>
     </div>
+    <script>
+      var imgs = document.querySelectorAll(".image_container");
+
+      function tick(e) {
+        console.log(e % imgs.length);
+        imgs.forEach((img) => {
+          img.style.opacity = 0;
+          img.style.transform = "scale(0)";
+        });
+        imgs[e % imgs.length].style.opacity = 1;
+        imgs[e % imgs.length].style.transform = "scale(1)";
+        setTimeout(() => {
+          tick(e + 1);
+        }, 5000);
+      }
+      tick(0);
+    </script>
   </body>
 </html>
