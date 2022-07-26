@@ -39,7 +39,10 @@
 
 .info_image{
     position: absolute;
-    width: 100%;
+    width: auto;
+    max-height: 100%;
+    /* object-fit: cover; */
+    
 }
 
 .info_text{
