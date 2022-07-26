@@ -57,12 +57,13 @@
     opacity: 0;
     font-style: italic;
     position: absolute;
-    transition: opacity .5s;
     width: 100%;
     padding: 3rem;
     text-align: center;
-    bottom: 0;
+    transform: translateY(7.4rem);
+    transition: opacity .5s, transform .5s;
     left: 0;
+    bottom: 0;
 }
 
 .info_image_description:before{
@@ -79,6 +80,7 @@
 
 .image_container:hover>.info_image_description{
     opacity: 1;
+    transform: translateY(0);
 }
 .image_container:hover>.info_image_description:before{
     filter: blur(3px);
