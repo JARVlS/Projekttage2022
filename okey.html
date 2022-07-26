@@ -11,7 +11,6 @@
   <body>
     <img id="head_logo" src="LogoKlein.png" alt="" />
     <h1 id="main_headline">Kant Sommerfest 2022</h1>
-
     <nav class="nav">
       <a href="/" class="page_link">Start</a>
 
@@ -20,10 +19,19 @@
         <div class="content">
           <ul id="content_list">
             <li>
-              <a href="test.html">Lebensmitteltechnologien</a>
+              <a href="lifetech.html">Lebensmitteltechnologien</a>
             </li>
             <li>
-              <a href="test.html">Buchbinden</a>
+              <a href="buchbinden.html">Buchbinden & Papier schöpfen</a>
+            </li>
+            <li>
+              <a href="okey.html">Okey - Türkisches Spiel</a>
+            </li>
+            <li>
+              <a href="tryitvegan.html">Try It Vegan!</a>
+            </li>
+            <li>
+              <a href="schiedsrichter.html">Schiedsrichter-Ausbildung</a>
             </li>
           </ul>
         </div>
@@ -32,53 +40,59 @@
     <div class="project_content">
       <div class="images_container">
         <div class="image_container">
-          <img class="info_image" src="webdev_image.png" alt="" />
+          <img class="info_image" src="Kant2022/pr_okey_1.jpg" alt="" />
           <div class="info_image_description">
-            <p>Hier ist unser erstes Bild</p>
+            <p>Hasan - Der Projektleiter</p>
           </div>
         </div>
 
         <div class="image_container">
-          <img class="info_image" src="webdev_image2.png" alt="" />
+          <img class="info_image" src="Kant2022/pr_okey_2.jpg" alt="" />
           <div class="info_image_description">
-            <p>Hier ist unser zweites Bild</p>
+            <p>Okey...</p>
           </div>
         </div>
+
         <div class="image_container">
-          <img class="info_image" src="IMG_20220725_112234.jpg" alt="" />
+          <img class="info_image" src="Kant2022/pr_okey_3.jpg" alt="" />
           <div class="info_image_description">
-            <p>Hier ist unser drittes Bild</p>
+            <p>Spiel in voller Fahrt</p>
           </div>
         </div>
       </div>
       <div class="info_text">
-        <h2 class="project_name_headline">LEBENMITTELTECHNOLOGIE</h2>
+        <h2 class="project_name_headline">Okey - Ein türkisches Spiel</h2>
         <p>
-          Mikroorganismen sind ein wichtiger Bestandteil für unsere
-          Lebensmittel. Brot, Käse, Salami oder Kaffee würde es ohne Bakterien
-          und Hefe nicht geben. Die SchülerInnen stellen einen Sauerteig her,
-          mithilfe dessen Brot hergestellt werden kann. Joghurt entsteht durch
-          Fermentation von Milch durch Milchsäurebakterien und die SchülerInnen
-          experimentieren hier mit verschiedenen Milcharten (Soja, Mandel,
-          Kuh...). Am letzten Tag wurde Eiscreme hergestellt und nach der
-          geschmeidigsten Eiscreme geforscht.
+          Okey ist ein in der Türkei sehr beliebtes Spiel aus der Romme -
+          Familie. Ziel ist es, durch Ziehen und Abwerfen von Spielsteinen, als
+          Erster eine Gewinnhand zusammnezustellen, welche vollständig aus
+          Gruppen und Sequenzen besteht.
         </p>
       </div>
     </div>
     <script>
       var imgs = document.querySelectorAll(".image_container");
-
+      var t;
       function tick(e) {
         console.log(e % imgs.length);
         imgs.forEach((img) => {
           img.style.opacity = 0;
           img.style.transform = "scale(0)";
         });
+
         imgs[e % imgs.length].style.opacity = 1;
         imgs[e % imgs.length].style.transform = "scale(1)";
-        setTimeout(() => {
+        t = setTimeout(() => {
           tick(e + 1);
-        }, 5000);
+        }, 4200);
+        imgs[e % imgs.length].addEventListener("mouseleave", () => {
+          t = setTimeout(() => {
+            tick(e + 1);
+          }, 2000);
+        });
+        imgs[e % imgs.length].addEventListener("mouseenter", () => {
+          clearTimeout(t);
+        });
       }
       tick(0);
     </script>

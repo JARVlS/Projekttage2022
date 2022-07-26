@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Erste Website</title>
+    <link rel="stylesheet" href="test.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <img id="head_logo" src="LogoKlein.png" alt="" />
+    <h1 id="main_headline">Kant Sommerfest 2022</h1>
+    <nav class="nav">
+      <a href="/" class="page_link">Start</a>
+
+      <div class="dropdown">
+        <p id="dropdown_header">Projekte</p>
+        <div class="content">
+          <ul id="content_list">
+            <li>
+              <a href="lifetech.html">Lebensmitteltechnologien</a>
+            </li>
+            <li>
+              <a href="buchbinden.html">Buchbinden & Papier schöpfen</a>
+            </li>
+            <li>
+              <a href="okey.html">Okey - Türkisches Spiel</a>
+            </li>
+            <li>
+              <a href="tryitvegan.html">Try It Vegan!</a>
+            </li>
+            <li>
+              <a href="schiedsrichter.html">Schiedsrichter-Ausbildung</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="project_content">
+      <div class="images_container">
+        <div class="image_container">
+          <img class="info_image" src="Kant2022/pr_lifetech_1.jpg" alt="" />
+          <div class="info_image_description">
+            <p>Gruppenbild im Bioraum</p>
+          </div>
+        </div>
+
+        <div class="image_container">
+          <img class="info_image" src="Kant2022/pr_lifetech_2.jpg" alt="" />
+          <div class="info_image_description">
+            <p>Hochexplosives Gemisch</p>
+          </div>
+        </div>
+
+        <div class="image_container">
+          <img class="info_image" src="Kant2022/pr_lifetech_3.jpg" alt="" />
+          <div class="info_image_description">
+            <p>Theorie zur Praxis</p>
+          </div>
+        </div>
+      </div>
+      <div class="info_text">
+        <h2 class="project_name_headline">LEBENSMITTELTECHNOLOGIE</h2>
+        <p>
+          Mikroorganismen sind ein wichtiger Bestandteil für unsere
+          Lebensmittel. Brot, Käse, Salami oder Kaffee würde es ohne Bakterien
+          und Hefe nicht geben. Die SchülerInnen stellen einen Sauerteig her,
+          mithilfe dessen Brot hergestellt werden kann. Joghurt entsteht durch
+          Fermentation von Milch durch Milchsäurebakterien und die SchülerInnen
+          experimentieren hier mit verschiedenen Milcharten (Soja, Mandel,
+          Kuh...). Am letzten Tag wurde Eiscreme hergestellt und nach der
+          geschmeidigsten Eiscreme geforscht.
+        </p>
+      </div>
+    </div>
+    <script>
+      var imgs = document.querySelectorAll(".image_container");
+        var t
+      function tick(e) {
+        console.log(e % imgs.length);
+        imgs.forEach((img) => {
+          img.style.opacity = 0;
+          img.style.transform = "scale(0)";
+        });
+
+        imgs[e % imgs.length].style.opacity = 1;
+        imgs[e % imgs.length].style.transform = "scale(1)";
+        t  = setTimeout(() => {
+            tick(e + 1);
+          }, 4200);
+        imgs[e % imgs.length].addEventListener("mouseleave", () => {
+            t = setTimeout(() => {
+                tick(e + 1);
+              }, 2000);
+        });
+        imgs[e % imgs.length].addEventListener("mouseenter", ()=>{
+          clearTimeout(t)
+        })
+      }
+      tick(0);
+    </script>
+  </body>
+</html>
