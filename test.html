@@ -20,7 +20,7 @@
         <div class="content">
           <ul id="content_list">
             <li>
-              <a href="learning.html">Webdesign</a>
+              <a href="test.html">Lebensmitteltechnologien</a>
             </li>
             <li>
               <a href="test.html">Buchbinden</a>
@@ -33,20 +33,28 @@
       <div class="images_container">
         <div class="image_container">
           <img class="info_image" src="webdev_image.png" alt="" />
-          <p class="info_image_description">Hier ist unser erstes Bild</p>
+          <div class="info_image_description">
+            <p>Hier ist unser erstes Bild</p>
+          </div>
         </div>
 
         <div class="image_container">
           <img class="info_image" src="webdev_image2.png" alt="" />
-          <p class="info_image_description">Hier ist unser zweites Bild</p>
+          <div class="info_image_description">
+            <p>Hier ist unser zweites Bild</p>
+          </div>
         </div>
         <div class="image_container">
           <img class="info_image" src="webdev_image.png" alt="" />
-          <p class="info_image_description">Hier ist unser drittes Bild</p>
+          <div class="info_image_description">
+            <p>Hier ist unser drittes Bild</p>
+          </div>
         </div>
         <div class="image_container">
           <img class="info_image" src="webdev_image2.png" alt="" />
-          <p class="info_image_description">Hier ist unser viertes Bild</p>
+          <div class="info_image_description">
+            <p>Hier ist unser viertes Bild</p>
+          </div>
         </div>
       </div>
       <div class="info_text">
@@ -75,7 +83,7 @@
         imgs[e % imgs.length].style.opacity = 1;
         imgs[e % imgs.length].style.transform = "scale(1)";
         setTimeout(() => {
-          tick(e + 1);
+          //tick(e + 1);
         }, 5000);
       }
       tick(0);

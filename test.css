@@ -1,6 +1,7 @@
 *{
  margin: 0;
  padding: 0;
+ box-sizing: border-box;
 }
 
 :root {
@@ -12,8 +13,6 @@
     --weird_green: rgb(150, 183, 174);
 }
 
-body *{
-}
 .project_content{
     margin-top: 2.5rem;
 }
@@ -31,8 +30,11 @@ body *{
 }
 
 .image_container{
+    height: 100%;
+    width: 100%;
     opacity: 0;
     transition: opacity .75s;
+    position: relative;
 }
 
 .info_image{
@@ -56,11 +58,28 @@ body *{
     font-style: italic;
     position: absolute;
     transition: opacity .5s;
+    width: 100%;
+    padding: 3rem;
+    text-align: center;
+    bottom: 0;
+    left: 0;
+}
+
+.info_image_description:before{
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background: var(--med_light_blue);
+    opacity: .5;
+    left: 0;
+    top: 0;
+    transition: blur .2s;
 }
 
 .image_container:hover>.info_image_description{
     opacity: 1;
 }
-.image_container:hover>.info_image{
+.image_container:hover>.info_image_description:before{
     filter: blur(3px);
 }
